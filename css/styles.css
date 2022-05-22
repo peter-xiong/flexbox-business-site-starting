@@ -1,20 +1,27 @@
 /* CSS Variables */
 :root {
-  --primary: #ddd;
-  --dark: #333;
+  --dark: #4d2b2f;
   --light: #e8e9eb;
+  --yellow: #ffefc3;
+  --pink: #f9e2ea;
 }
 
 html {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Fira Sans", Helvetica, sans-serif;
   color: var(--dark);
 }
 
 body {
-  background: #ccc;
+  background: var(--light);
   margin: 0;
   line-height: 1.4;
+}
+
+h1,
+h3,
+h4 {
+  font-family: Rubik, Helvetica, sans-serif;
 }
 
 img {
@@ -29,8 +36,8 @@ img {
 }
 
 .btn {
-  background-color: var(--light);
-  color: var(--dark);
+  background-color: var(--dark);
+  color: var(--yellow);
   padding: 0.6rem 1.3rem;
   text-decoration: none;
   border: 0;
@@ -39,15 +46,18 @@ img {
 /* navigation */
 .main-nav {
   height: 200px;
-  display: grid;
   display: flex;
-  background: var(--light);
+  position: fixed;
+  background-color: var(--dark);
   width: 100%;
   align-items: center;
+  opacity: 0.9;
+  padding: 0.5rem 0 0 0.5rem;
 }
 
 .logo img {
   border-radius: 15%;
+  max-width: 100%;
 }
 
 .main-nav ul {
@@ -57,8 +67,28 @@ img {
   width: 100%;
   gap: 20px;
   padding: 0;
+  margin: 0 1rem 0 0;
   list-style: none;
   grid-template-columns: repeat(4, 1fr);
+}
+
+.main-nav li {
+  border-left: 1px solid #ffefc3;
+  border-right: 1px solid #ffefc3;
+}
+
+.main-nav a {
+  font-size: 1.5rem;
+}
+
+.main-nav a:hover {
+  font-size: 1.6rem;
+  transition: all 0.15s;
+}
+
+.main-nav a:active {
+  color: var(--pink);
+  transition: all 0.15s;
 }
 
 /* hero */
@@ -67,7 +97,9 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  max-width: 100%;
   min-height: 900px;
+  margin-top: 140px;
 }
 
 .hero {
@@ -75,16 +107,17 @@ img {
   grid-template-areas:
     "h1"
     "a";
-  padding: 0 0 0 3rem;
-  margin: 7rem 0;
+  padding: 0;
+  margin: 15rem 0 0 10rem;
 }
 
 .hero h1 {
-  padding: 0;
+  padding-bottom: 2rem;
   margin: 0;
   font-size: 5rem;
   text-transform: uppercase;
   letter-spacing: 0;
+  line-height: 1;
 }
 
 .hero em {
@@ -95,7 +128,8 @@ img {
   width: 150px;
   background-color: var(--dark);
   border-radius: 10px;
-  border: 1px solid #fff;
+  border: 1px solid #e8e9eb;
+  padding: 5px;
 }
 
 .hero button:hover {
@@ -128,8 +162,9 @@ img {
 .collection h3 {
   text-align: center;
   font-size: 2rem;
+  color: #4d2b2f;
   text-transform: capitalize;
-  border: 1px solid #333;
+  border: 1px solid #4d2b2f;
   width: fit-content;
   padding: 0 20px;
   border-radius: 5px;
@@ -144,11 +179,12 @@ img {
 }
 
 .her-btn {
-  margin: 1rem auto;
   width: 150px;
   background-color: var(--dark);
   border-radius: 10px;
-  border: 1px solid #fff;
+  border: 1px solid #e8e9eb;
+  padding: 5px;
+  margin: 2rem auto 0;
 }
 
 .her-btn:hover {
@@ -177,11 +213,12 @@ img {
 }
 
 .him-btn {
-  margin: 1rem auto;
   width: 150px;
   background-color: var(--dark);
   border-radius: 10px;
-  border: 1px solid #fff;
+  border: 1px solid #e8e9eb;
+  padding: 5px;
+  margin: 2rem auto 0;
 }
 
 .him-btn:hover {
@@ -210,11 +247,12 @@ img {
 }
 
 .kiddo-btn {
-  margin: 1rem auto;
   width: 150px;
   background-color: var(--dark);
   border-radius: 10px;
-  border: 1px solid #fff;
+  border: 1px solid #e8e9eb;
+  padding: 5px;
+  margin: 2rem auto 0;
 }
 
 .kiddo-btn:hover {
@@ -270,9 +308,7 @@ img {
   margin: 0;
   font-size: 2rem;
   line-height: 1.5;
-  text-transform: capitalize;
   letter-spacing: 0;
-  font-style: italic;
   margin-bottom: 4rem;
 }
 
@@ -295,7 +331,256 @@ img {
   border-radius: 10%;
 }
 
+.member-container h4 {
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+
+.member-container p {
+  padding: 0;
+  margin: 0;
+}
+
 /* footer */
 footer {
+  height: 100px;
+  background-color: #4d2b2f;
   text-align: center;
+}
+
+footer p {
+  color: #e8e9eb;
+  margin: 40px auto;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .hero {
+    justify-items: center;
+    align-items: center;
+    margin: 15rem auto;
+  }
+
+  .collection {
+    margin: 3rem auto 0;
+  }
+
+  .her-btn {
+    margin: 2rem auto 0;
+  }
+
+  .him-btn {
+    margin: 2rem auto 0;
+  }
+
+  .kiddo-btn {
+    margin: 2rem auto 0;
+  }
+
+  .statement {
+    width: 100%;
+  }
+
+  .meet-us {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .logo {
+    width: 100%;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 3rem 0;
+  }
+
+  .main-nav li {
+    border: none;
+    line-height: 1;
+  }
+
+  .hero-container {
+    margin-bottom: 3rem;
+  }
+
+  .hero {
+    justify-items: center;
+    align-items: center;
+    margin: 15rem auto;
+  }
+
+  .collection {
+    margin: 2.5rem auto;
+    width: 100%;
+  }
+
+  .her-btn {
+    margin: 1rem auto 0;
+  }
+
+  .him-btn {
+    margin: 1rem auto 0;
+  }
+
+  .kiddo-btn {
+    margin: 1rem auto 0;
+  }
+
+  .about-us {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-us h1 {
+    margin: 3rem auto 2rem;
+  }
+
+  .statement {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .statement p {
+    padding: 1rem;
+    margin: 0 0 1rem 0;
+  }
+
+  .meet-us {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .member-container {
+    margin: 0 auto 3rem;
+  }
+
+  .member-container h4 {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .logo {
+    display: none;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+  }
+
+  .main-nav li {
+    border: none;
+    line-height: 1;
+  }
+
+  .hero-container {
+    margin: 100px auto 0;
+    width: 100%;
+  }
+
+  .hero {
+    margin: 8rem auto;
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .hero a {
+    font-size: 1rem;
+  }
+
+  .hero button {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .collection {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .collection h3 {
+    margin: 0 auto 1rem;
+    font-size: 1.25rem;
+  }
+
+  .her-btn {
+    width: 100px;
+    margin: 1rem auto;
+  }
+
+  .her-btn a {
+    font-size: 1rem;
+  }
+
+  .him-btn {
+    width: 100px;
+    margin: 1rem auto;
+  }
+
+  .him-btn a {
+    font-size: 1rem;
+  }
+
+  .kiddo-btn {
+    width: 100px;
+    margin: 1rem auto;
+  }
+
+  .kiddo-btn a {
+    font-size: 1rem;
+  }
+
+  .about-us {
+    margin: 1rem auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-us h1 {
+    font-size: 18px;
+    margin: 1rem auto;
+  }
+
+  .statement {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+  }
+
+  .statement p {
+    margin: 0 0 1rem 0;
+    padding: 0;
+    font-size: 16px;
+  }
+
+  .meet-us {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .member-container h4 {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .member-container p {
+    font-size: 16px;
+  }
 }
