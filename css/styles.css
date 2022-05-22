@@ -76,6 +76,10 @@ img {
   margin: 0 auto 2rem;
 }
 
+#you-style {
+  text-decoration: underline;
+}
+
 /* navigation */
 .main-nav {
   height: 200px;
