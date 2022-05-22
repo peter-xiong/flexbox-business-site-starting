@@ -237,7 +237,8 @@ img {
 
 /* about-us */
 .about-us {
-  margin: 5rem 0 5rem 0;
+  margin: 5rem auto;
+  width: 90%;
 }
 
 .about-us h1 {
@@ -278,9 +279,13 @@ img {
 /* meet the team */
 .meet-us {
   display: flex;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .member-container ul {
+  margin: 0 1rem;
+  padding: 0;
   list-style: none;
   text-align: center;
 }
@@ -288,4 +293,9 @@ img {
 .member-container img {
   width: 100%;
   border-radius: 10%;
+}
+
+/* footer */
+footer {
+  text-align: center;
 }
