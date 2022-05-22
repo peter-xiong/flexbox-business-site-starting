@@ -6,6 +6,19 @@
   --pink: #f9e2ea;
 }
 
+/* Table of contents
+  1. general styling
+  2. navigation
+  3. hero
+  4. her collection 
+  5. him collection 
+  6. kiddos collection
+  7. about-us
+  8. footer
+  9. media queries
+*/
+
+/* general styling */
 html {
   box-sizing: border-box;
   font-family: "Fira Sans", Helvetica, sans-serif;
@@ -41,6 +54,26 @@ img {
   padding: 0.6rem 1.3rem;
   text-decoration: none;
   border: 0;
+}
+
+.collection {
+  display: grid;
+  width: 80%;
+  margin: 12rem auto 1rem;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.collection h3 {
+  text-align: center;
+  font-size: 2rem;
+  color: #4d2b2f;
+  text-transform: capitalize;
+  border: 1px solid #4d2b2f;
+  width: fit-content;
+  padding: 0 20px;
+  border-radius: 5px;
+  margin: 0 auto 2rem;
 }
 
 /* navigation */
@@ -150,27 +183,6 @@ img {
   transition: all 0.15s;
 }
 
-/* collection */
-.collection {
-  display: grid;
-  width: 80%;
-  margin: 12rem auto 1rem;
-  text-align: center;
-  padding-top: 2rem;
-}
-
-.collection h3 {
-  text-align: center;
-  font-size: 2rem;
-  color: #4d2b2f;
-  text-transform: capitalize;
-  border: 1px solid #4d2b2f;
-  width: fit-content;
-  padding: 0 20px;
-  border-radius: 5px;
-  margin: 0 auto 2rem;
-}
-
 /* her collection */
 .her-collection {
   display: grid;
@@ -239,7 +251,7 @@ img {
   transition: all 0.15s;
 }
 
-/* kiddos */
+/* kiddos collection */
 .kiddo-collection {
   display: grid;
   gap: 2.5px 5px;
@@ -312,7 +324,6 @@ img {
   margin-bottom: 4rem;
 }
 
-/* meet the team */
 .meet-us {
   display: flex;
   width: 80%;
@@ -353,6 +364,8 @@ footer p {
   color: #e8e9eb;
   margin: 40px auto;
 }
+
+/* media queries */
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .hero {
